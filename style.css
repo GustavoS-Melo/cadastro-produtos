@@ -1,63 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
+
+body {
+    background: #f5f6fa;
+    color: #333;
+}
+
+h1{
+    font-weight: 400;
+}
+/* HEADER */
 header {
-    background-color: #303030;
-    padding: 5px;
-    color: antiquewhite;
+    background: #303030;
+    padding: 20px;
     text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 main {
-    padding: 30px 50px;
-}
-.card {
-    background-color: aliceblue;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
-}
-.inputpd {
-    display: grid;
-    margin-bottom: 10px;
-}
-input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
-    border: 0;
-    padding: 10px;
-    color: aliceblue;
-    background-color: #303030;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all ease 0.3;
-}
-button:hover {
-    background-color: black;
-}
-.conteudo {
-    margin-top: 15px;
-}
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: #ccc;
-}
-table th {
-    background-color: #303030;
-    padding: 1px;
-    color: aliceblue;
-}
-table td {
-    padding: 1px;
+    padding: 40px 60px;
 }
 
+/* TÍTULO */
+.titulo h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.titulo span {
+    color: #707070;
+    font-size: 15px;
+}
+
+/* CARD DO FORMULÁRIO */
+.card {
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 450px;
+}
+
+.inputpd {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.inputpd label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #303030;
+}
+
+/* BOTÕES */
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.adicionar {
+    background: #303030;
+    color: #fff;
+}
+
+.adicionar:hover {
+    background: #000;
+}
+
+.cancelar {
+    background: #c0392b;
+    color: #fff;
+}
+
+.cancelar:hover {
+    background: #922b21;
+}
+
+/* TABELA */
+.conteudo {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #303030;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+/* IMAGEM DE LIXEIRA */
 table td img {
     width: 25px;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }

@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produtos</title>
+    <title>Cadastro de Produtos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Controle de produtos</h1>
+        <h1>Controle de Produtos</h1>
     </header>
+
     <main>
-        <h2>Produtos</h2>
-        <span>Lista de Produtos</span>
+
+        <section class="titulo">
+            <h2>Produtos</h2>
+            <span>Gerencie seus produtos de forma fácil</span>
+        </section>
+
         <div class="card">
+
             <div class="inputpd">
-                <label for="">Produto</label>
-                <input type="text" id="pdnome" placeholder="Nome do produto">
+                <label for="pdnome">Produto</label>
+                <input type="text" id="pdnome" placeholder="Digite o nome do produto">
             </div>
+
             <div class="inputpd">
-                <label>preço</label>
-                <input type="text" id="pdpreco" placeholder="R$ 00.00">
+                <label for="pdpreco">Preço</label>
+                <input type="text" id="pdpreco" placeholder="Ex: 59.90">
             </div>
-            <button onclick="produto.Adicionar()">Adicionar</button>
-            <button onclick="produto.Cancelar()">Cancelar</button>
+
+            <div class="botoes">
+                <button class="btn adicionar" onclick="produto.Adicionar()">Adicionar</button>
+                <button class="btn cancelar" onclick="produto.Cancelar()">Cancelar</button>
+            </div>
+
         </div>
+
         <div class="conteudo">
-            <table border="1">
+            <table>
                 <thead>
-                    <th>ID</th>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Remover</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Remover</th>
+                    </tr>
                 </thead>
-                <tbody id="tbody">
-                    
-                </tbody>
+                <tbody id="tbody"></tbody>
             </table>
         </div>
+
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
